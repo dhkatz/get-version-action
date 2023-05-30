@@ -1,4 +1,4 @@
-name: 'Get Version'
+name: 'Get Semver Version'
 description: 'Extracts the version from github.ref.'
 branding:
   icon: 'play'
