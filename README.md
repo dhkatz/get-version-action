@@ -1,4 +1,4 @@
-# Get Version Action
+# Get Version Action [![build](https://github.com/dhkatz/get-version-action/actions/workflows/build.yml/badge.svg)](https://github.com/dhkatz/get-version-action/actions/workflows/build.yml)
 
 A GitHub Action which extracts the version from `github.ref`.
 
@@ -45,7 +45,7 @@ The semver build version, for example `BUILD.1` in the case of `v1.2.3-ALPHA.0+B
 ~~~~YML
 steps:
     - id: get_version
-      uses: battila7/get-version-action@v2
+      uses: dhkatz/get-version-action@v3
 
     - run: echo ${{ steps.get_version.outputs.version }}
 
