@@ -1,5 +1,8 @@
 name: 'Get Version'
 description: 'Extracts the version from github.ref.'
+branding:
+  icon: 'play'
+  color: gray-dark
 outputs:
   version:
     description: 'The pushed version, for example "v1.2.7"'
