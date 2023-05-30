@@ -1,5 +1,5 @@
-import core from '@actions/core';
-import github from '@actions/github';
+import { setOutput } from '@actions/core';
+import { context } from '@actions/github';
 import { extractVersionFromRef, VersionInfo } from './extract';
 
 const toKebabCase = (str: string) =>
@@ -10,12 +10,12 @@ if (require.main === module) {
 }
 
 export default function main() {
-  const result = extractVersionFromRef(github.context.ref);
+  const result = extractVersionFromRef(context.ref);
   const keys = Object.keys(result) as Array<keyof VersionInfo>;
 
   for (const key of keys) {
-    core.setOutput(toKebabCase(key), result[key]);
+    setOutput(toKebabCase(key), result[key]);
   }
 
-  core.setOutput('is-semver', !!result.major);
+  setOutput('is-semver', !!result.major);
 }
