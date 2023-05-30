@@ -1,4 +1,4 @@
-name: 'Get Version'
+name: 'Get Version Action'
 description: 'Extracts the version from github.ref.'
 outputs:
   version:
