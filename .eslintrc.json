@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended",
+    "plugin:github/recommended",
+    "plugin:github/typescript"
+  ]
+}
